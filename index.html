@@ -53,13 +53,133 @@
 <body>
 <div class="page-wrapper">
     
+    
+    
+    
+    
     	<div class="section">
+		<hr class="class-1" />
+		<h1>Audio Samples</h1>
+		<hr class="class-1" />
+		<p class="body">This demo accompanies our paper titled 'Fine-Grained Quantitative Emotion Editing for Speech Generation', in which we introduce a novel emotion representation called Hierarchical Emotion Distribution (Hierarchical ED). This representation facilitates modeling of emotion intensity at varying granularities. The following audio files showcase examples of our model's capabilities. You can try more audio samples in the following sections.</p>
+		<hr>
+		<div class="table-container">
+			<table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th>Original Audio</th>
+					<th>Edited Audio</th>
+				</tr>
+				<tr>
+					<td colspan="2"><h4>Increase 'Happy' intensity of the first two words</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/10_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/10_modified.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><h4>Increase 'Sad' intensity of the first two words</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/11_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/11_modified.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><h4>Increase 'Surprise' intensity of the last two words</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/20_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/20_modified.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><h4>Increase 'Angry' intensity of the last two words</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/21_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/21_modified.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="2"><h4>Utterance-level Control: 'Angry'</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/30_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Intro/Blizzard/30_modified.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+			</table>
+		</div>
+		<hr>
+	</div>
+	<div class="section">
 		<hr class="class-1" />
 		<h1>Section 1: Emotion Expressiveness: Reproducibility via Ground-Truth Emotion Information</h1>
 		<hr class="class-1" />
-		<p class="body"></p>
-		<hr>
-		<h2>Dataset: Blizzard Challenge 2013</h2>
+		<p class="body">The first section presents a demo to evaluate our model's reproducibility. The Hierarchical ED of our model and The emotion intensities of MsEmoTTS are obtained by the reference audio.</p>
 		<hr>
 		<div class="table-container">
 			<table>
@@ -206,63 +326,51 @@
 			</table>
 		</div>
 		<hr>
-		<h2>Dataset: Emotional Speech Database (ESD)</h2>
+	</div>
+	<div class="section">
+		<hr class="class-1" />
+		<h1>Section 2: Maximizing Emotion Intensities of Two Long Words</h1>
+		<hr class="class-1" />
+		<p class="body">In this section, we demonstrate the control of emotion intensities in a specific segment of speech, primarily focusing on two words with the longest phoneme sequence. We elevate the word-level emotion intensities of these words, and the corresponding phoneme-level intensities, to 1.0, while maintaining the other emotion intensities constant. This showcases our model's ability to adjust emotion granularly within specified speech segments. The modifed words are represented in the curly blankets. the MsEmoTTS baseline is only able to change the intensity of the ground-truth emotion so only one emotion control is available.</p>
+		<hr>
+		<h2>Model: MsEmoTTS (baseline)</h2>
 		<hr>
 		<div class="table-container">
 			<table>
 				<tr>
-					<th>Target Audio</th>
-					<th>MsEmoTTS</th>
-					<th>Hierarchical ED (ours)</th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Original</th>
+					<th>Angry</th>
+					<th>Happy</th>
+					<th>Sad</th>
+					<th>Surprise</th>
 				</tr>
 				<tr>
+					<td colspan="4"><h4>All the girls {traipsing} off to {Sheffield} every day!</h4></td>
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/80_Test.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/181_MsEI_original.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
 				</td>
 				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/80_MsEI_Audio.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
 				</td>
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/80_HED_Audio.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/394_Test.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/394_MsEI_Audio.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/394_HED_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/181_MsEI_Surprise.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -270,10 +378,69 @@
 				</tr>
 
 				<tr>
+					<td colspan="4"><h4>And as to {smaller-sized} rooms than I had been used {to,} I really could not give it a thought.</h4></td>
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/428_Test.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/155_MsEI_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/155_MsEI_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>"This man is {almost} too {gallant} to be in love," thought Emma.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_MsEI_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_MsEI_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>This {violence} is all most {repulsive:"} and so, no doubt, she felt it."</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_MsEI_original.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -281,15 +448,74 @@
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/428_MsEI_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/145_MsEI_Angry.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
 				</td>
 				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>He paused {before} he {answered:} 'Neither, I hope.</h4></td>
+				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/428_HED_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/142_MsEI_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_MsEI_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>it is {disposed} to impart all that the brain {conceives;}</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_MsEI_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_MsEI_Surprise.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -297,10 +523,58 @@
 				</tr>
 
 				<tr>
+					<td colspan="4"><h4>Clifford felt his father was a {hopeless} {anachronism.}</h4></td>
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/629_Test.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/12_MsEI_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_MsEI_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				<td class="center-align">
+					<p>---</p>
+				</td>
+				</tr>
+
+			</table>
+		</div>
+		<hr>
+		<h2>Model: Hierarchical ED (ours)</h2>
+		<hr>
+		<div class="table-container">
+			<table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Original</th>
+					<th>Angry</th>
+					<th>Happy</th>
+					<th>Sad</th>
+					<th>Surprise</th>
+				</tr>
+				<tr>
+					<td colspan="4"><h4>All the girls {traipsing} off to {Sheffield} every day!</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/181_HED_original.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -308,7 +582,7 @@
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/629_MsEI_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/181_HED_Angry.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -316,7 +590,23 @@
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/629_HED_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/181_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/181_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/181_HED_Surprise.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -324,10 +614,11 @@
 				</tr>
 
 				<tr>
+					<td colspan="4"><h4>And as to {smaller-sized} rooms than I had been used {to,} I really could not give it a thought.</h4></td>
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/678_Test.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/155_HED_original.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -335,7 +626,7 @@
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/678_MsEI_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/155_HED_Angry.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -343,7 +634,243 @@
 				<td class="center-align">
 					<div class="audio-container">
 						<audio controls>
-							<source src="./audio_files/Reference_Mel/ESD/678_HED_Audio.wav" type="audio/wav" />
+							<source src="./audio_files/Long/Blizzard/155_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/155_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/155_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>"This man is {almost} too {gallant} to be in love," thought Emma.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_HED_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/148_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>This {violence} is all most {repulsive:"} and so, no doubt, she felt it."</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_HED_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/145_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>He paused {before} he {answered:} 'Neither, I hope.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_HED_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/142_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>it is {disposed} to impart all that the brain {conceives;}</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_HED_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/112_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>Clifford felt his father was a {hopeless} {anachronism.}</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_HED_original.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Long/Blizzard/12_HED_Surprise.wav" type="audio/wav" />
 							Your browser does not support the audio element.
 						</audio>
 					</div>
@@ -356,9 +883,283 @@
 	</div>
 	<div class="section">
 		<hr class="class-1" />
-		<h1>Section 2: Emotion Expressiveness: Reproducibility via Predicted Emotion Information</h1>
+		<h1>Section 3: Maximizing Utterance-level Emotion Intensities (Hierarchical ED)</h1>
 		<hr class="class-1" />
-		<p class="body"></p>
+		<p class="body">In this section, we demonstrate the control of utterance-level emotion intensities. We elevate the emotion intensities of the emotion to 1.0 while maintaining the other emotion intensities 0.0. We only present our model's demo since MsEmoTTS does not cover this control.</p>
+		<hr>
+		<div class="table-container">
+			<table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th>Angry</th>
+					<th>Happy</th>
+					<th>Sad</th>
+					<th>Surprise</th>
+				</tr>
+				<tr>
+					<td colspan="4"><h4>All the girls traipsing off to Sheffield every day!</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/181_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/181_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/181_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/181_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>And as to smaller-sized rooms than I had been used to, I really could not give it a thought.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/155_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/155_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/155_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/155_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>"This man is almost too gallant to be in love," thought Emma.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/148_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/148_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/148_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/148_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>This violence is all most repulsive:" and so, no doubt, she felt it."</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/145_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/145_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/145_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/145_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>He paused before he answered: 'Neither, I hope.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/142_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/142_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/142_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/142_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>it is disposed to impart all that the brain conceives;</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/112_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/112_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/112_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/112_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+				<tr>
+					<td colspan="4"><h4>Clifford felt his father was a hopeless anachronism.</h4></td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/12_HED_Angry.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/12_HED_Happy.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/12_HED_Sad.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				<td class="center-align">
+					<div class="audio-container">
+						<audio controls>
+							<source src="./audio_files/Utterance/Blizzard/12_HED_Surprise.wav" type="audio/wav" />
+							Your browser does not support the audio element.
+						</audio>
+					</div>
+				</td>
+				</tr>
+
+			</table>
+		</div>
+		<hr>
+	</div>
+	<div class="section">
+		<hr class="class-1" />
+		<h1>Appendix: Emotion Expressiveness: Reproducibility via Predicted Emotion Information</h1>
+		<hr class="class-1" />
+		<p class="body">The appendix section presents a demo to show our model's reproducibility without using the reference audio. The Hierarchical ED and The Emotion Intensity of MsEmoTTS are predicted from the linguistic embedding generated by the linguistic encoder and used to reproduce the audio.</p>
 		<hr>
 		<div class="table-container">
 			<table>
@@ -506,1194 +1307,7 @@
 		</div>
 		<hr>
 	</div>
-	<div class="section">
-		<hr class="class-1" />
-		<h1>Section 3: Maximizing Emotion Intensities of Two Long Words (Blizzard)</h1>
-		<hr class="class-1" />
-		<p class="body"></p>
-		<hr>
-		<h2>Model: MsEmoTTS (baseline)</h2>
-		<hr>
-		<div class="table-container">
-			<table>
-				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th>Original</th>
-					<th>Angry</th>
-					<th>Happy</th>
-					<th>Sad</th>
-					<th>Surprise</th>
-				</tr>
-				<tr>
-					<td colspan="4"><h4>Clifford felt his father was a {hopeless} {anachronism.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_MsEI_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>it is {disposed} to impart all that the brain {conceives;}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_MsEI_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>He paused {before} he {answered:} 'Neither, I hope.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_MsEI_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>This {violence} is all most {repulsive:"} and so, no doubt, she felt it."</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_MsEI_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>"This man is {almost} too {gallant} to be in love," thought Emma.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_MsEI_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And as to {smaller-sized} rooms than I had been used {to,} I really could not give it a thought.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_MsEI_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>All the girls {traipsing} off to {Sheffield} every day!</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_MsEI_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-			</table>
-		</div>
-		<hr>
-		<h2>Model: Hierarchical ED (ours)</h2>
-		<hr>
-		<div class="table-container">
-			<table>
-				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th>Original</th>
-					<th>Angry</th>
-					<th>Happy</th>
-					<th>Sad</th>
-					<th>Surprise</th>
-				</tr>
-				<tr>
-					<td colspan="4"><h4>Clifford felt his father was a {hopeless} {anachronism.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/12_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>it is {disposed} to impart all that the brain {conceives;}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/112_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>He paused {before} he {answered:} 'Neither, I hope.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/142_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>This {violence} is all most {repulsive:"} and so, no doubt, she felt it."</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/145_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>"This man is {almost} too {gallant} to be in love," thought Emma.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/148_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And as to {smaller-sized} rooms than I had been used {to,} I really could not give it a thought.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/155_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>All the girls {traipsing} off to {Sheffield} every day!</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/Blizzard/181_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-			</table>
-		</div>
-		<hr>
-	</div>
-	<div class="section">
-		<hr class="class-1" />
-		<h1>Section 4: Maximizing Emotion Intensities of Two Long Words (ESD)</h1>
-		<hr class="class-1" />
-		<p class="body"></p>
-		<hr>
-		<h2>Model: MsEmoTTS (baseline)</h2>
-		<hr>
-		<div class="table-container">
-			<table>
-				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th>Original</th>
-					<th>Angry</th>
-					<th>Happy</th>
-					<th>Sad</th>
-					<th>Surprise</th>
-				</tr>
-				<tr>
-					<td colspan="4"><h4>You are {not} a {runaway,who} are you?</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_MsEI_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>She had said, so that one could {keep} up a {conversation!}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_MsEI_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>The {nastiest} things they saw were the {cobwebs.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_MsEI_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>Story {twenty} nine a boy and a {monkey.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_MsEI_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And what are {doves.} And what are {doves.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_MsEI_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And what are {doves.} And what are {doves.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_MsEI_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>In which fox loses a tail and its elder {sister} {finds} one.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_MsEI_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>Story {twenty} nine a boy and a {monkey.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_MsEI_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<p>---</p>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_MsEI_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-			</table>
-		</div>
-		<hr>
-		<h2>Model: Hierarchical ED (ours)</h2>
-		<hr>
-		<div class="table-container">
-			<table>
-				<tr>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th></th>
-					<th>Original</th>
-					<th>Angry</th>
-					<th>Happy</th>
-					<th>Sad</th>
-					<th>Surprise</th>
-				</tr>
-				<tr>
-					<td colspan="4"><h4>You are {not} a {runaway,who} are you?</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/30_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>She had said, so that one could {keep} up a {conversation!}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/99_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>The {nastiest} things they saw were the {cobwebs.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/129_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>Story {twenty} nine a boy and a {monkey.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/491_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And what are {doves.} And what are {doves.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/751_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>And what are {doves.} And what are {doves.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/766_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>In which fox loses a tail and its elder {sister} {finds} one.</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/901_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-				<tr>
-					<td colspan="4"><h4>Story {twenty} nine a boy and a {monkey.}</h4></td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_HED_original.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_HED_Angry.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_HED_Happy.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_HED_Sad.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				<td class="center-align">
-					<div class="audio-container">
-						<audio controls>
-							<source src="./audio_files/Long/ESD/923_HED_Surprise.wav" type="audio/wav" />
-							Your browser does not support the audio element.
-						</audio>
-					</div>
-				</td>
-				</tr>
-
-			</table>
-		</div>
-		<hr>
-	</div>
     
-
-
-    
-
-
-
     
 </div>
 </body>
